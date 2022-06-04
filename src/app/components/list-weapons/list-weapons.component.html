@@ -1,0 +1,22 @@
+<div class="list-container">
+  <ng-container *ngIf="weapons.length > 0">
+    <div *ngFor="let weapon of weapons" class="weapon-item-card">
+      <p class="weapon-item-name">{{ weapon.displayName }}</p>
+      <div class="weapon-item-image">
+        <img src="{{ weapon.displayIcon }}" alt="{{ weapon.displayName }}" />
+      </div>
+      <div class="weapon-item-shop-data">
+        <p *ngIf="weapon.shopData">
+          <span class="weapon-data-label">Category: </span>
+          <span class="weapon-category">{{weapon.shopData.categoryText}}</span>
+        </p>
+        <p *ngIf="weapon.shopData">
+          <span class="weapon-data-label">Price: </span>${{weapon.shopData.cost}}
+        </p>
+        <p *ngIf="weapon.shopData">
+          <span class="weapon-data-label">Magazine size: </span>{{ weapon.weaponStats.magazineSize }}-round
+        </p>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,54 @@
+.list-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    margin-top: 20px
+
+    .weapon-item-card
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        margin: 10px
+        width: 400px
+        height: 500px
+        background-color: #f2f2f2
+        color: #0c1b23
+        border-radius: 10px
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)
+        cursor: pointer
+        transition: all 0.3s ease-in-out
+
+        .weapon-item-name
+            font-size: 24px
+            font-weight: bold
+            text-align: center
+            margin-top: 10px
+
+        .weapon-item-image
+            img
+                width: 250px
+                height: auto
+                object-fit: cover
+                user-select: none
+                filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))
+
+
+        .weapon-data-label
+            font-size: 20px
+            font-weight: bold
+            margin-top: 10px
+
+        .weapon-category
+            border-radius: 25px
+            background-color: #ff4654
+            color: white
+            font-weight: bold
+            padding: 5px 10px
+
+    .weapon-item-card:hover
+        box-shadow: 0px 0px 20px rgba(255, 70, 84, 0.8)
+
+    .weapon-item-card:hover .weapon-item-card-img
+        transform: scale(1.1)

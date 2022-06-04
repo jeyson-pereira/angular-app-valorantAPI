@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'valorantweapons';
+  title = 'ValorantAPI';
+  showWeapons: boolean;
+  showAgents: boolean;
+
+  constructor() {
+    this.showWeapons = true;
+    this.showAgents = false;
+  }
+
+
+  handleShowContent(content :string) {
+    switch (content) {
+      case 'Weapons':
+        this.showWeapons = !this.showWeapons;
+        break;
+      case 'Agents':
+        this.showAgents = !this.showAgents;
+        break;
+      default:
+        break;
+    }
+  }
 }
