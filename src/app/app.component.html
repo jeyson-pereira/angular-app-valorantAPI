@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>{{ title }}</h1>
+  <h1 class="title">{{ title }}</h1>
   <!-- Weapons Content -->
   <div class="item-content">
     <div class="bar-item-content" (click)="handleShowContent('Weapons')">
@@ -13,7 +13,7 @@
     <div class="bar-item-content" (click)="handleShowContent('Agents')">
       <h2 class="title-dropdown">Agents</h2>
     </div>
-    <!-- <app-list-agents *ngIf="showAgents"></app-list-agents> -->
+    <app-list-agents *ngIf="showAgents"></app-list-agents>
   </div>
 
 </div>

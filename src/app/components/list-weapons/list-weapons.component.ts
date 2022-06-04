@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Weapon } from 'src/app/models/weapon.model';
-import { WeaponsService } from 'src/app/services/weapons.service';
+import { ValorantApiService } from 'src/app/services/valorant-api.service';
 
 @Component({
   selector: 'app-list-weapons',
@@ -10,12 +10,12 @@ import { WeaponsService } from 'src/app/services/weapons.service';
 export class ListWeaponsComponent implements OnInit {
   weapons: Array<Weapon>;
 
-  constructor(private weaponService: WeaponsService) {
+  constructor(private valorantApiService: ValorantApiService) {
     this.weapons = new Array<Weapon>();
   }
 
   ngOnInit(): void {
-    this.weaponService.getWeapons().subscribe((response) => {
+    this.valorantApiService.getWeapons().subscribe((response) => {
       this.weapons = response.data;
     });
   }

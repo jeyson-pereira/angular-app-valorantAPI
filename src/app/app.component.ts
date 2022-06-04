@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor() {
     this.showWeapons = true;
-    this.showAgents = false;
+    this.showAgents = true;
   }
 
 
