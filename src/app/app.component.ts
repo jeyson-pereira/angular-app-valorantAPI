@@ -12,8 +12,8 @@ export class AppComponent {
   showMaps: boolean;
 
   constructor() {
-    this.showWeapons = false;
-    this.showAgents = false;
+    this.showWeapons = true;
+    this.showAgents = true;
     this.showMaps = true;
   }
 
