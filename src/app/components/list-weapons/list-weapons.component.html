@@ -7,14 +7,14 @@
       </div>
       <div class="weapon-item-shop-data">
         <p *ngIf="weapon.shopData">
-          <span class="weapon-data-label">Category: </span>
+          <span class="weapon-data-label">Categoria: </span>
           <span class="weapon-category">{{weapon.shopData.categoryText}}</span>
         </p>
         <p *ngIf="weapon.shopData">
-          <span class="weapon-data-label">Price: </span>${{weapon.shopData.cost}}
+          <span class="weapon-data-label">Precio: </span>${{weapon.shopData.cost}}
         </p>
         <p *ngIf="weapon.shopData">
-          <span class="weapon-data-label">Magazine size: </span>{{ weapon.weaponStats.magazineSize }}-round
+          <span class="weapon-data-label">Capacidad de cargador: </span>{{ weapon.weaponStats.magazineSize }}
         </p>
       </div>
     </div>

@@ -15,11 +15,9 @@ export class ListAgentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.valorantApiService.getAgents().subscribe(
-      (response) =>
-        (this.agents = response.data.filter((agent) => {
-          return agent.isPlayableCharacter ? agent : null;
-        }))
-    );
+    this.valorantApiService.getAgents()
+    .subscribe((response) => {
+      this.agents = response.data;
+    });
   }
 }

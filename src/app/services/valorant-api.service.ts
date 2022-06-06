@@ -12,10 +12,14 @@ export class ValorantApiService {
   constructor(private http:HttpClient) {}
 
   getWeapons(): Observable<ResponseWeapon> {
-    return this.http.get<ResponseWeapon>(`${environment.apiUrl}/weapons`);
+    return this.http.get<ResponseWeapon>(
+      `${environment.apiUrl}/weapons?language=es-MX`
+    );
   }
 
   getAgents(): Observable<ResponseAgent> {
-    return this.http.get<ResponseAgent>(`${environment.apiUrl}/agents`);
+    return this.http.get<ResponseAgent>(
+      `${environment.apiUrl}/agents?language=es-MX&isPlayableCharacter=true`
+    );
   }
 }

@@ -1,7 +1,13 @@
 <div class="list-container">
     <ng-container *ngIf="agents.length > 0">
       <div *ngFor="let agent of agents" class="agent-item-card">
-        <p class="agent-item-name">{{ agent.displayName }}</p>
+        <div class="agent-item-name">
+          <p class="name-text">{{ agent.displayName }}</p>
+          <span class="tooltip">
+            <img src="../../../assets/img/info-icon.png" alt="info-icon">
+            <span class="tooltiptext">{{agent.description}}</span>
+          </span>
+        </div>
         <div class="agent-role-content">
             <div class="agent-role-image">
                 <img src="{{agent.role.displayIcon}}" alt="agent role {{agent.role.displayName}}">
