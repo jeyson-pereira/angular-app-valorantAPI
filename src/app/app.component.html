@@ -7,13 +7,19 @@
     </div>
     <app-list-weapons *ngIf="showWeapons"></app-list-weapons>
   </div>
-
   <!-- Agents Content -->
   <div class="item-content">
     <div class="bar-item-content" (click)="handleShowContent('Agents')">
       <h2 class="title-dropdown">Agentes</h2>
     </div>
     <app-list-agents *ngIf="showAgents"></app-list-agents>
+  </div>
+  <!-- Maps Content -->
+  <div class="item-content">
+    <div class="bar-item-content" (click)="handleShowContent('Maps')">
+      <h2 class="title-dropdown">Mapas</h2>
+    </div>
+    <app-list-maps *ngIf="showMaps"></app-list-maps>
   </div>
 
 </div>

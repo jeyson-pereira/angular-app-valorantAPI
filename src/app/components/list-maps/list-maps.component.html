@@ -1,0 +1,9 @@
+<div class="list-container">
+  <ng-container *ngIf="maps.length > 0">
+    <div *ngFor="let map of maps" class="map-item-card">
+      <img src="{{ map.splash }}" alt="{{ map.displayName }}" />
+      <div class="map-name-text">{{ map.displayName }}</div>
+      <div class="map-coords-text">{{ map.coordinates }}</div>
+    </div>
+  </ng-container>
+</div>

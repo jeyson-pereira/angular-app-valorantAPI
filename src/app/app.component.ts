@@ -9,10 +9,12 @@ export class AppComponent {
   title = 'ValorantAPI';
   showWeapons: boolean;
   showAgents: boolean;
+  showMaps: boolean;
 
   constructor() {
-    this.showWeapons = true;
-    this.showAgents = true;
+    this.showWeapons = false;
+    this.showAgents = false;
+    this.showMaps = true;
   }
 
 
@@ -23,6 +25,9 @@ export class AppComponent {
         break;
       case 'Agents':
         this.showAgents = !this.showAgents;
+        break;
+      case 'Maps':
+        this.showMaps = !this.showMaps;
         break;
       default:
         break;
